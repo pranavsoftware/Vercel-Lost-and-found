@@ -5,8 +5,8 @@ const multer = require("multer");
 const mongoose = require("mongoose");
 
 // Import Routes
-const authRoutes = require("./routes/authRoutes");
-const complaintRoutes = require("./routes/complaintRoutes");
+const authRoutes = require("../routes/authRoutes");
+const complaintRoutes = require("../routes/complaintRoutes");
 
 // ✅ Connect to MongoDB Atlas
 const connectDB = async () => {
