@@ -14,7 +14,7 @@ const jwtSecret = process.env.JWT_SECRET || "your_jwt_secret";
 router.post("/register", async (req, res) => {
     try {
         const { name, email, mobile, location, password } = req.body;
-
+    console.log(name, email, mobile, location, password );
         // Check if user already exists
         let user = await User.findOne({ email });
         if (user) return res.status(400).json({ message: "❌ Email already exists" });
