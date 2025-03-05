@@ -4,9 +4,11 @@ const cors = require("cors");
 const multer = require("multer");
 const mongoose = require("mongoose");
 
+
+console.log("APP Live")
 // Import Routes
-const authRoutes = require("../routes/authRoutes");
-const complaintRoutes = require("../routes/complaintRoutes");
+const authRoutes = require("./routes/authRoutes");
+const complaintRoutes = require("./routes/complaintRoutes");
 
 // ✅ Connect to MongoDB Atlas
 const connectDB = async () => {
