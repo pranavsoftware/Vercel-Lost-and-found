@@ -3,7 +3,8 @@ const express = require("express");
 const cors = require("cors");
 const multer = require("multer");
 const mongoose = require("mongoose");
-
+import path from "path";
+import { fileURLToPath } from 'url';
 
 console.log("APP Live")
 // Import Routes
@@ -24,7 +25,11 @@ const connectDB = async () => {
     }
 };
 connectDB();
-
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'server.html'));
+});
 // Initialize Express App
 const app = express();
 
